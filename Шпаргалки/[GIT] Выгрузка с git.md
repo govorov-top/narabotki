@@ -3,7 +3,6 @@
 #### 1) Скачиваем и устанавливаем гит, после в терминале вводим:
 ```
 git config --global user.email "info@roman-web-developer.ru"
-
 git config --global user.name "RGameShow"
 ```
 #### 2) Инициализируем Git репозиторий:
