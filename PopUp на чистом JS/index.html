@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>PopUp на чистом JS</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>PopUp - на чистом JavaScript</h1>
+    <h2>Просто кнопки вызывающие окно с контентом</h2>
+    <div class="d-flex">
+        <div class="btn popClick" data-pop="hidden-block">Обычное окно</div>
+        <div class="btn popClick" data-pop="hidden-block_1">Длинное окно</div>
+        <div class="btn popClick" data-pop="hidden-block_3">Ошибочное окно</div>
+
+        <!--Скрытое обычное окно-->
+        <div class="popup" id="hidden-block" data-max-width="300">
+            <div class="pop html text-center">
+                <p class="title">Заголовок</p>
+                <p class="desc">Какой-то текст</p>
+                <a class="btn popClick img"
+                   data-pop="img"
+                   data-full-img="https://clck.ru/SrrcE" style="margin: 0 auto">Давай откроем картинку</a>
+            </div>
+        </div>
+        <!--Скрытое длинное окно-->
+        <div class="popup" id="hidden-block_1" data-max-width="500">
+            <div class="pop html text-center">
+                <p class="title">Заголовок</p>
+                <p class="desc">Какой-то текст</p>
+                <div style="height: 937px">
+                    <a class="btn popClick" data-pop="hidden-block" style="margin: 0 auto">Давай откроем обычное окно!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>По клику открывается полный размер картинки</h2>
+    <div class="d-flex">
+        <div class="img popClick" data-pop="img" data-full-img="https://clck.ru/SrrcE">
+            <img alt="ОПИСАНИЕ" src="https://clck.ru/Srrd5"> <!--Тут маленькая картинка-->
+        </div>
+        <div class="img popClick" data-pop="img" data-full-img="https://clck.ru/SrufJ">
+            <img alt="ОПИСАНИЕ" src="https://clck.ru/SrueF"> <!--Тут маленькая картинка-->
+        </div>
+
+        <!--Скрытое окно для картинок, сколько бы их не было все попадают сюда-->
+        <div class="popup" id="img">
+            <div class="pop img"></div>
+        </div>
+    </div>
+
+    <h2>По клику открывается видео</h2>
+    <div class="video popClick" data-pop="video_pop" data-full-video="https://www.youtube.com/embed/onOEns_MnC4/" data-width-video="560" data-height-video="315">
+        <img alt="ОПИСАНИЕ" class="transition" src="https://clck.ru/Sruox" style="width: 250px">
+    </div>
+
+    <!--Скрытое окно для картинок, сколько бы их не было все попадают сюда-->
+    <div class="popup" id="video_pop">
+        <div class="pop video"></div>
+    </div>
+
+    <h2>Добавим кнопку динамически, а после вызовем окно</h2>
+    <div class="d-flex">
+        <div class="btn addBtn" style="background: green">Добавить кнопку</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

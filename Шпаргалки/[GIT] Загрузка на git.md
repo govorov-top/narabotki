@@ -1,0 +1,101 @@
+
+## Создать локальный репозиторий и отправить его на сервер
+
+#### 1.1 Скачиваем и устанавливаем гит, после в терминале вводим:
+```
+git config --global user.email "info@roman-web-developer.ru"
+git config --global user.name "RGameShow"
+```
+#### 1.2 Инициализировать Git репозиторий:
+```
+git init
+```
+
+#### 1.3 Подготовить все файлы к коммиту:
+```
+git add .
+```
+
+#### 1.4 Сделать коммит с коротким сообщением "First commit":
+```
+git commit -m "First commit"
+```
+Либо объединить 2 и 3 запрос в один: 
+```
+git commit -am "First commit"
+```
+
+#### 1.5 Связать локальный репозиторий с удаленным репозиторием:
+```
+git remote add origin https://github.com/RGameShow/project.git
+```
+Проверяем где мы находимся:
+```
+git remote -v
+```
+Чтобы сменить репозиторий пишем следующую команду:
+```
+git remote set-url origin https://github.com/RGameShow/project2.git
+```
+
+#### 1.6 Отправить локальный репозиторий на GitHub (в удаленный GitHub репозиторий):
+```
+git push -u origin master
+```
+P.S. Первая отправка делается с дополнением 
+```-u origin master``` далее без.
+
+## ОТПРАВИТЬ ИЗМЕНЕНИЯ НА СЕРВЕР
+
+#### 2.1 Добавляем изменения в репозиторий, для этого вводим команду чтобы подготовить все файлы к коммиту:
+```
+git add .
+```
+#### 2.2 Делаем коммит c коротким сообщением:
+```
+git commit -m "Modified file"
+```
+
+#### 2.3 Отправляем изменения на сервер:
+```
+git push
+```
+
+## СОЗДАНИЕ ВЕТОК
+
+#### 3.1 Просмотреть список существующих веток:
+```
+git branch
+```
+
+#### 3.2 Создать новую ветку «ver_project_1»:
+```
+git branch ver_project_1
+```
+
+#### 3.3 Переключиться для работы в ветку «ver_project_1»:
+```
+git checkout ver_project_1
+```
+
+#### 3.4 Загрузить данную ветку на GIT:
+```
+git push --set-upstream origin ver_project_1 или git push -u origin dev
+```
+
+## ПЕРЕНОС ИЗМЕНЕНИЙ В ОСНОВНУЮ ВЕТКУ MASTER
+
+#### 4.1 Переключаемся в ветку «master»:
+```
+git checkout master
+```
+
+#### 4.2 Перенос изменений из ветки «ver_project_1» в ветку «master»:
+```
+git merge ver_project_1
+```
+
+#### 4.3 Если ветка «ver_project_1» более не нужна, удаляем ее следующей командой:
+```
+git branch -D ver_project_1
+```

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Добавить el класс среди множества блоков</title>
+</head>
+<body>
+<style>
+    #valuted{
+        display: flex;
+    }
+    #valuted .valute{
+        background: blue;
+        color: white;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    #valuted .valute.active{
+        background: red;
+    }
+</style>
+
+<div id="valuted">
+    <div class="valute active" data-valute="RUB">RUB</div>
+    <div class="valute" data-valute="USD">USD</div>
+    <div class="valute" data-valute="EUR">EUR</div>
+</div>
+
+<script>
+    let btnValuted;
+    let items;
+    //Выбираем контейнер в которм хотим пробежаться и удалть / добавить классы
+    btnValuted = document.querySelector('#valuted');
+    btnValuted.addEventListener('click', function(clickEl) {
+        items = document.querySelectorAll('#valuted .valute');
+        //удаляем у всех дочерних элементов класс active
+        Array.from(items).forEach(item => {
+            item.classList.remove('active');
+        });
+        // На кликнутый элемент вешаем класс active
+        clickEl.target.classList.add('active');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closest parent to find</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="info"></div>
+
+<div id="boxes" class="container">
+    <div class="item-box">
+        <p class="title">Загаловок 1</p>
+        <p class="desc">Описание 1</p>
+        <p>Уцененный!</p>
+        <div class="btn">Собрать данные</div>
+    </div>
+    <div class="item-box">
+        <p class="title">Загаловок 2</p>
+        <p class="price">500</p>
+        <p class="desc">Описание 2</p>
+        <div class="btn">Собрать данные</div>
+    </div>
+    <div class="item-box">
+        <p class="title">Загаловок 3</p>
+        <p class="desc">Описание 3</p>
+        <p class="text">Прочий текст</p>
+        <div class="btn">Собрать данные</div>
+    </div>
+    <div class="item-box">
+        <p>СКИДКА!</p>
+        <p class="title">Загаловок 4</p>
+        <p class="desc">Описание 4</p>
+        <div class="btn">Собрать данные</div>
+    </div>
+</div>
+
+<script>
+    let btn, parent, title, desc;
+    btn = document.querySelectorAll('#boxes .item-box .btn');
+    btn.forEach(function (clickBtn){
+        clickBtn.onclick = function(e) {
+            parent = clickBtn.closest('.item-box');
+            title = parent.querySelector('.title').innerText;
+            desc = parent.querySelector('.desc').innerText;
+            document.querySelector('#info').innerHTML = '<b>Титл: </b>'+title+'<br><b>Описание: </b>'+desc;
+        }
+    });
+</script>
+</body>
+</html>
