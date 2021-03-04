@@ -85,6 +85,22 @@ cd site.ru
 git pull
 ```
 
+## WordPress
+```
+touch .gitignore
+nano .gitignore
+```
+```
+wp-config.php
+.idea
+```
+```
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:RGameShow/project.git
+git push -u origin master
+```
 # КОНЕЦ!
 
 ## P.S. полезные команды
