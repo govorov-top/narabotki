@@ -1,4 +1,5 @@
 ## Создание нового ключа GPG
+- [Оригинал](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key)
 
 **Если у вас нет существующего ключа GPG, вы можете сгенерировать новый ключ GPG, чтобы использовать его для подписи коммитов и тегов.**
 
