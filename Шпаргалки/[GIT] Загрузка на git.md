@@ -3,7 +3,7 @@
 
 #### 1.1 Скачиваем и устанавливаем гит, после в терминале вводим:
 ```
-git config --global user.email "info@roman-web-developer.ru"
+git config --global user.email "roman@govorov.top"
 git config --global user.name "govorov-top"
 ```
 #### 1.2 Инициализировать Git репозиторий:
