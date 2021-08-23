@@ -4,7 +4,7 @@
 
 ### Клонируем репозиторий на наш сайт перейдя в нужный каталог `cd site.ru`
 ```
-git clone https://github.com/RGameShow/project.git nameFolder
+git clone https://github.com/govorov-top/project.git nameFolder
 ```
 ### Копируем все из папки `nameFolder` в корень сайта
 Перед клонированием выполняем команду, чтобы файлы начинающиеся с точки, например `.htaccess` тоже копировались
@@ -98,7 +98,7 @@ wp-config.php
 git init
 git add .
 git commit -m "first commit"
-git remote add origin git@github.com:RGameShow/project.git
+git remote add origin git@github.com:govorov-top/project.git
 git push -u origin master
 ```
 # КОНЕЦ!

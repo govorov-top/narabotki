@@ -4,7 +4,7 @@
 #### 1.1 Скачиваем и устанавливаем гит, после в терминале вводим:
 ```
 git config --global user.email "info@roman-web-developer.ru"
-git config --global user.name "RGameShow"
+git config --global user.name "govorov-top"
 ```
 #### 1.2 Инициализировать Git репозиторий:
 ```
@@ -27,7 +27,7 @@ git commit -am "First commit"
 
 #### 1.5 Связать локальный репозиторий с удаленным репозиторием:
 ```
-git remote add origin https://github.com/RGameShow/project.git
+git remote add origin https://github.com/govorov-top/project.git
 ```
 Проверяем где мы находимся:
 ```
@@ -35,7 +35,7 @@ git remote -v
 ```
 Чтобы сменить репозиторий пишем следующую команду:
 ```
-git remote set-url origin https://github.com/RGameShow/project2.git
+git remote set-url origin https://github.com/govorov-top/project2.git
 ```
 
 #### 1.6 Отправить локальный репозиторий на GitHub (в удаленный GitHub репозиторий):
