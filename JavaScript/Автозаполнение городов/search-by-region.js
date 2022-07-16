@@ -1,48 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<script src='https://api-maps.yandex.ru/2.1/?apikey=ab75370f-cd67-41e0-be79-cbca266c5496&lang=ru_RU' type="text/javascript"></script>
-<style>
-    form .box-regions{
-        position: relative;
-    }
-    form .box-regions input{
-        text-transform: capitalize;
-    }
-    form .box-regions .regions{
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        max-width: 300px;
-        box-shadow: 0 4px 5px #e6e6e6;
-        border: 2px solid #f9f9f9;
-    }
-    form .box-regions .regions .elem-reg {
-        padding: 5px 10px;
-        border-bottom: 1px solid #f3f3f3;
-    }
-    form .box-regions .regions .elem-reg.active,
-    form .box-regions .regions .elem-reg:hover{
-        background: #f3f3f3;
-        cursor: pointer;
-    }
-    form .box-regions .regions .elem-reg:last-child{
-        border: 0;
-    }
-</style>
-<form action="">
-    <div class="box-regions">
-        <input type="text" name="region" placeholder="Введите город">
-        <div class="regions"></div>
-    </div>
-</form>
-
-<script>
+'use strict';
+document.addEventListener('DOMContentLoaded', () => {
     let findToArray = function (arr, find) {
         return arr.filter(function (value) {
             return (value + "").toLowerCase().indexOf(find.toLowerCase()) !== -1;
@@ -84,6 +41,4 @@
             changeReg.closest('.box-regions').querySelector('.regions').style.display = 'none'
         }
     });
-</script>
-</body>
-</html>
+});

@@ -1,0 +1,24 @@
+form .box-regions{
+    position: relative;
+}
+form .box-regions .regions{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 300px;
+    box-shadow: 0 4px 5px #e6e6e6;
+    border: 2px solid #f9f9f9;
+}
+form .box-regions .regions .elem-reg {
+    padding: 5px 10px;
+    border-bottom: 1px solid #f3f3f3;
+}
+form .box-regions .regions .elem-reg.active,
+form .box-regions .regions .elem-reg:hover{
+    background: #f3f3f3;
+    cursor: pointer;
+}
+form .box-regions .regions .elem-reg:last-child{
+    border: 0;
+}

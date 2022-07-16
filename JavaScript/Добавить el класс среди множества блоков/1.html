@@ -33,20 +33,13 @@
 <script>
     let btnValuted;
     //Выбираем контейнер в которм хотим пробежаться и удалть / добавить классы
-    btnValuted = document.querySelector('#valuted');
-    btnValuted.onclick = function(clickEl){
-        //удаляем у всех дочерних элементов класс active
-        for(let i = 0; i < btnValuted.children.length; i++){
-            btnValuted.children[i].classList.remove('active');
-        }
-        // На кликнутый элемент вешаем класс active
-        clickEl.target.classList.add('active');
-    }
+    btnValuted = document.querySelectorAll("#valuted .valute");
+    btnValuted.forEach(function(clickBtn) {
+        clickBtn.onclick = function() {
+            btnValuted.forEach(el => el.classList.remove("active"));
+            clickBtn.classList.add("active");
+        };
+    });
 </script>
-</body>
-</html></title>
-</head>
-<body>
-
 </body>
 </html>
